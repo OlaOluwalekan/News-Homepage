@@ -1,0 +1,59 @@
+.services {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.single-service {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+  max-height: 200px;
+}
+
+.services img {
+  width: 30%;
+  height: 100%;
+  margin-right: 15px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.single-service div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.single-service h3 {
+  font-size: 25px;
+  color: var(--clr-grayish-blue);
+}
+
+.single-service h5 {
+  font-size: 18px;
+  color: var(--clr-very-dark-blue);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.single-service h5:hover {
+  color: var(--clr-soft-red);
+}
+
+.single-service p {
+  color: var(--clr-dark-grayish-blue);
+  line-height: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  .services {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
